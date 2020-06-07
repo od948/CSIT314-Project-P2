@@ -5,7 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class basetests {
+
+public class baseTests {
     private WebDriver driver;
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
@@ -22,8 +23,8 @@ public class basetests {
         System.out.println(driver.getTitle());
         //driver.quit();
     }
-public static void main(String args[]){
-        basetests test = new basetests();
+    public static void main(String args[]){
+        baseTests test = new baseTests();
         test.setUp();
     }
 }
