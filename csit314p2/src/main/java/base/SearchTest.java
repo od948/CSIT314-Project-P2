@@ -21,10 +21,14 @@ public class SearchTest {
 
 
 
+    //previous itteration random generation, now using random word from list of top ebay searches.
+    /*
     public String randomStringGenerator(int length){
         String searchText = RandomStringUtils.randomAlphabetic(length);
         return searchText;
     }
+    */
+
 
     //following method is a random word generator using a txtfile and rng to select a word to search.
     public String topsearch() {
@@ -43,7 +47,6 @@ public class SearchTest {
         }
         Random r = new Random();
         double d = (r.nextInt(searchtotal) + 0);
-        //System.out.println("test");
         Scanner find = null;
         try {
             find = new Scanner(file);
@@ -51,9 +54,7 @@ public class SearchTest {
             e.printStackTrace();
         }
         int findint = 0;
-        //System.out.println(findint + " , " + d);
         while (findint <= d) {
-            //System.out.println(findint + " = " + d);
             if (findint == d){
                 tops = find.nextLine();
                 break;
@@ -199,7 +200,6 @@ public class SearchTest {
         }
         System.out.println();
 
-        //Get the number of results returned
         return;
     }
 
@@ -208,10 +208,3 @@ public class SearchTest {
 
     }
 }
-
-//---------------------TO-DO----------------//
-/*
-    There needs to be some tests to avoid expensive words error
-    Would be nice if we can generate some meaningful words that could
-    return more than 0 result.
- */
