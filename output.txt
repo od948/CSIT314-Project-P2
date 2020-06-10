@@ -1,13 +1,14 @@
 
- start basic test 
+ start open webpage test 
 
-Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 29036
+Starting ChromeDriver 83.0.4103.39 (ccbf011cb2d2b19b506d844400483861342c20cd-refs/branch-heads/4103@{#416}) on port 10129
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jun. 10, 2020 4:04:23 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun. 10, 2020 10:23:30 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 Opening Electronics, Cars, Fashion, Collectibles & More | eBay
+TEST PASSED
 
  start add to cart test 
 
@@ -15,25 +16,52 @@ current page: 3X Lightning Data Charger Cable Cord Compatible for Apple iPhone 5
 item added to cart
 cart opened
 cart size = 1
+TEST PASSED
 
  start remove from cart test 
 
-deleted first item
+delete all items
 cart size = 0
+TEST PASSED
 
  start advanced search tests 
 
 keyword to search ebay for: water bottle
-random word to search ebay for: mkl
-test search bar, enters mkl and submit
-searching for mkl items found: 0
+random word to search ebay for: cordless phones
+
+Start test of search bar, using cordless phones
+current page: cordless phones | eBay
+searching for cordless phones items found: 1,078
+ TEST PASSED
+
 searching for: water bottle
-Basic search items found: 44,540
-condition= Not Specified, items found: 924
-condition= Used, items found: 120
-condition= New, items found: 44,419
-Sell Type= Auction, items found: 43
-Sell Type= Buy it now, items found: 44,441
+Control test
+Basic search items found: 44,577
+ TEST PASSED
+
+Test Condition = Not Specified
+condition= Not Specified, items found: 921
+ TEST PASSED
+
+Test Condition = Used
+condition= Used, items found: 121
+ TEST PASSED
+
+Test Condition = New
+condition= New, items found: 44,345
+ TEST PASSED
+
+Test Sale Type = Auction
+Sell Type= Auction, items found: 42
+ TEST PASSED
+
+Test Sale Type = Buy it now
+Sell Type= Buy it now, items found: 44,497
+ TEST PASSED
+
+Test Sale Type = Classified Ads
 Sell Type= Classified Ads, items found: 0
+ TEST PASSED
+
 
 Process finished with exit code 0

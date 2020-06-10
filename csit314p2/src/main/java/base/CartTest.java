@@ -29,6 +29,13 @@ public class CartTest {
         //reports cart size, testing if add to cart worked
         System.out.println("cart size = " + driver.findElements(By.className("cart-bucket-lineitem")).size());
 
+
+        if(driver.findElements(By.className("cart-bucket-lineitem")).size() > 0){
+            System.out.println("TEST PASSED");
+        } else {
+            System.out.println("TEST FAILED");
+        }
+
         //driver.quit();
     }
 
@@ -38,10 +45,17 @@ public class CartTest {
         while(isPresent){
 
             driver.findElement(By.cssSelector("button[data-test-id='cart-remove-item']")).click();
-            System.out.println("deleted first item");
+            System.out.println("delete all items");
             if(driver.findElements(By.className("cart-bucket-lineitem")).size() > 0) isPresent=false;
             Thread.sleep(1500);
             System.out.println("cart size = " + driver.findElements(By.className("cart-bucket-lineitem")).size());
+
+            if(driver.findElements(By.className("cart-bucket-lineitem")).size() > 0){
+                System.out.println("TEST FAILED");
+            } else {
+                System.out.println("TEST PASSED");
+            }
+
         }
     }
 
