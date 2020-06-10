@@ -21,7 +21,12 @@ public class baseTests {
 
         ChromeOptions options = new ChromeOptions();
         //allows chrome to run without opening a browser.
+
+
+        //comment out the following line to see what the program is doing
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--ingore-certificate-errors");
+
+
         //drivers are the main object that selenium interacts with browsers with, this code opens a new window.
         driver = new ChromeDriver(options);
 
